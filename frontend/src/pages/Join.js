@@ -8,18 +8,18 @@ import {GameContext} from "../context/GameContext"
 
 function Join() {
     const data = useContext(GameContext)
-    const url =`http://localhost:4000/player/play/74049271-7256-43f1-a412-d96c5d363d3d`
-    console.log(url)
+    
+    // console.log(url)
     // const res =axios.post();
     const [nickname,setNickname] =useState('')
     const navigate=useNavigate()
     const handleSubmit=(event)=>{
+        const url =`http://localhost:4000/player/play/${data.Guuid}`
         event.preventDefault();
-        Axios.post(url
-            ,nickname)
+        Axios.post(url,{nickname})
         .then((res)=>{
             // data.setGuuid(res.uuid)
-            console.log("hi")
+           data.setNickname(nickname)
         })
         .then(()=>{
             

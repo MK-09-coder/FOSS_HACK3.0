@@ -8,9 +8,9 @@ router.post("/play/start",async(req,res,next)=>{
     const {pin} = req.body;
     const verify = await pool.query("SELECT game_id from GAME where (pin)=($1)",[pin])
     // console.log(verify.rows[0]);
-    // if (!verify.rows[0]){
-    //     return next(new CustomError("wrong pin",401))
-    // }
+    if (!verify.rows[0]){
+        return next(new CustomError("wrong pin",401))
+    }
     res.status(200).json(verify.rows[0])
 })
 

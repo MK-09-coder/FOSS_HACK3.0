@@ -11,14 +11,14 @@ function Home() {
      const [pin,setPin] =useState('')
     const navigate=useNavigate()
 
-    const handleSubmit=async (event)=>{
-        event.preventDefault();
-    await Axios.post(url,pin)
+    const handleSubmit=(event)=>{
+    event.preventDefault();
+     Axios.post(url,{pin})
         .then((res)=>{
             
-            if(res.data){
-                console.log(res.data)
-                data.setGuuid(res.game_id)
+            if(res){
+                console.log(res)
+                data.setGuuid(res.data.game_id)
             }
         })
         .then(()=>{

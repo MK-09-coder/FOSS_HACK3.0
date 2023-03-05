@@ -5,10 +5,12 @@ export const GameContext = createContext();
 
 export const GameProvider =({children})=>{
     const [Guuid,setGuuid] = useState();
+    const [nickname,setNickname] =useState();
     
 
     const values={
-        Guuid,setGuuid
+        Guuid,setGuuid,
+        nickname,setNickname
     }
 
     return (
