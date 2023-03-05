@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.start-button{
+    margin-top:50px
+}
+
+
+.add-questions{
+    background-color: black;
+}
+
+
+body{
+    background-color: rgb(15 23 42);
+}
+
+.question-box{
+    margin-left:100px;
+    margin-top: 80px;
+}
+
+.option-2{
+    color: rgb(255 255 255)!important;
+}
+
+.delete-duplicate{
+    margin-left: 650px;
+    margin-top:50px
+}
+
+.delete{
+    margin-right :20px;
+}
+
+.choose{
+    margin-top: 50px;
+    
+}
+
+.red,.green,.yellow,.blue{
+    margin-bottom: 20px;
+}
+
+.profile-pic{
+    margin-top: 30px;
+}
+
+.hello{
+    margin-top:20px
+}
+
+.wrong-text{
+    margin-top: 50px;
+}
+
+.wrong-img{
+    margin-left: 100px;
+}
